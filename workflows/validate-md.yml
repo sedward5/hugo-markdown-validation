@@ -1,0 +1,33 @@
+name: Validate Markdown Content
+
+on:
+  push:
+    paths:
+      - "content/**/*.md"
+      - "layouts/shortcodes/**/*.html"
+  pull_request:
+    paths:
+      - "content/**/*.md"
+      - "layouts/shortcodes/**/*.html"
+
+jobs:
+  validate-md-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install Dependencies
+        run: pip install pyyaml
+
+      - name: Validate Markdown Content
+        run: |
+          python /scripts/validate_md_content.py
+      - name: Report Success
+        if: success()
+        run: echo "Validation completed successfully."
