@@ -1,6 +1,6 @@
 # Hugo Content Validator
 
-A Python-based project designed to **validate content files in a Hugo site**, ensuring your Markdown files have valid image references, shortcodes, and internal page links. This project includes a custom GitHub Action to automate the validation process on every push or pull request.
+A Python-based project designed to **validate content files in a Hugo site**, ensuring your Markdown files have valid image references, shortcodes, and internal page links. This project includes a custom GitHub Action to automate the validation process on every push or pull request. More details in this [blog post](https://sedward5.com/iba-cocktail-challenge). 
 
 ## Features
 
