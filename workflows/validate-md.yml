@@ -27,7 +27,7 @@ jobs:
 
       - name: Validate Markdown Content
         run: |
-          python /scripts/validate_md_content.py
+          python scripts/validate_md_content.py
       - name: Report Success
         if: success()
         run: echo "Validation completed successfully."
